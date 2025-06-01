@@ -49,8 +49,6 @@ requirements:
         prediction_file_status = "SCORED"
 
         result = {'rrmse': RRMSE,
-                  'genDelta': genDelta,
-                  'nuDelta': nuDelta,
                   'submission_status': prediction_file_status}
         with open(args.results, 'w') as o:
           o.write(json.dumps(result))
