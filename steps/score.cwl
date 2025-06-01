@@ -46,8 +46,6 @@ requirements:
         keys = list(goldstandard['parameters'].keys())
         keys.sort()
         RRMSE = relative_root_mean_squared_error(np.array([goldstandard['parameters'][key] for key in keys]), np.array([submission['parameters'][key] for key in keys]))
-        genDelta = float(goldstandard['parameters']['generations']) - float(submission['parameters']['generations'])
-        nuDelta = float(goldstandard['parameters']['post_decline_fraction']) - float(submission['parameters']['post_decline_fraction'])
         prediction_file_status = "SCORED"
 
         result = {'rrmse': RRMSE,
